@@ -4,7 +4,7 @@ import os.path
 from werkzeug.utils import secure_filename
 
 
-bp = Blueprint('urlshort',__name__)
+bp = Blueprint('urlshort', __name__)
 
 
 @bp.route('/')
@@ -62,3 +62,7 @@ def page_not_found(error):
 @bp.route('/api')
 def session_api():
     return jsonify(list(session.keys()))
+
+# $env:FLASK_APP="urlshort"
+# $env:FLASK_ENV="development"
+# flask run
