@@ -63,6 +63,7 @@ def page_not_found(error):
 def session_api():
     return jsonify(list(session.keys()))
 
+
 # $env:FLASK_APP="urlshort"
 # $env:FLASK_ENV="development"
 # flask run
